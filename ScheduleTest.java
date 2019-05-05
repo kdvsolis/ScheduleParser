@@ -138,6 +138,7 @@ public class ScheduleTest {
     private void assertDateList(List<Date> dates, String string) {
         List<String> list = new ArrayList<String>();
         SimpleDateFormat dateFormat = new SimpleDateFormat("h:mm a z");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("EST"));
         for (Date date : dates) {
             list.add(dateFormat.format(date));
         }
