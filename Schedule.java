@@ -37,8 +37,8 @@ public class Schedule {
 
     public List<Date> getByList() {
         byList.clear();
-        if(this.scheduleString.contains("by")) {
-            String time = this.scheduleString.substring(this.scheduleString.indexOf("by") + 2, this.scheduleString.indexOf("every"));
+        if(this.scheduleString.toLowerCase().contains("by")) {
+            String time = this.scheduleString.substring(this.scheduleString.toLowerCase().indexOf("by") + 2, this.scheduleString.toLowerCase().lastIndexOf("est") + 3);
             String [] timeArray = time.split(",");
             for(int i = 0; i < timeArray.length; i++) {
                 try {
